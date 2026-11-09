@@ -1,0 +1,21 @@
+{
+  "name": "ether-archive",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:portal": "npm run dev --workspace=@ether-archive/portal",
+    "dev:nft": "npm run dev --workspace=@ether-archive/nft",
+    "dev:token": "npm run dev --workspace=@ether-archive/token",
+    "build": "turbo run build",
+    "build:portal": "npm run build --workspace=@ether-archive/portal",
+    "build:nft": "npm run build --workspace=@ether-archive/nft",
+    "build:token": "npm run build --workspace=@ether-archive/token"
+  },
+  "devDependencies": {
+    "turbo": "^2.11.10"
+  }
+}
